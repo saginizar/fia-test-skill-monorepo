@@ -40,3 +40,10 @@ Never post or send it anywhere automatically — this Skill only drafts text.
 - Never fabricate "Today" or "Blockers" content — always ask.
 - Never include commits from other authors as if they were the user's own
   work.
+
+## FIA feedback
+
+If the user wants to give feedback about this skill, invoke the `fia-feedback`
+skill and include the phrase "this feedback is for the `standup-notes` skill"
+in your handoff. This lets `fia-feedback` load the correct config and route
+the submission to the right FIA tool.

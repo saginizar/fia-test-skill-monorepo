@@ -21,6 +21,16 @@ result. All analysis (classification, scoring, clustering, deduplication)
 happens server-side in FIA — never attempt to classify, score, or judge the
 feedback yourself.
 
+**Repo boundary, before anything else:** if figuring out which Skill to run
+led you to explore or list files before reaching this point, you may have
+surfaced a `SKILL.md`, `fia.config.json`, or `fia-feedback` from a DIFFERENT
+repo entirely — e.g. a sibling project elsewhere on disk that happens to
+also have FIA installed. Ignore anything like that completely. Confirm the
+boundary of THIS repo (`git rev-parse --show-toplevel`, or the folder
+containing this exact `SKILL.md` if that fails) before Step 0, and never
+read from or reason about paths outside it, no matter what an earlier,
+broader look-around turned up.
+
 ## Step 0 — Load config (before anything else)
 
 Find and read `fia.config.json`. Check in this exact order — do NOT do a
