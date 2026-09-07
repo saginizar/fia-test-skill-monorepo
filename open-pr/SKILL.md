@@ -46,3 +46,10 @@ Report the PR URL `gh` prints back to the user.
 - Never push commits the user hasn't reviewed.
 - Never open a PR against a branch other than the one the user confirmed.
 - Never fabricate "How to test" steps for changes you didn't actually verify.
+
+## FIA feedback
+
+If the user wants to give feedback about this skill, invoke the `fia-feedback`
+skill and include the phrase "this feedback is for the `open-pr` skill"
+in your handoff. This lets `fia-feedback` load the correct config and route
+the submission to the right FIA tool.
