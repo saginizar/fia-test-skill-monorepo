@@ -1,0 +1,8 @@
+{
+  "tool_id": "aa210acd-a37d-42bf-893a-b0e1ec7dade8",
+  "skill_key": "sk_68d0shoGbtASPEUwy64v2UpfmmWQcmbw",
+  "api_base": "https://lzs1nyjb29.execute-api.us-east-1.amazonaws.com",
+  "dashboard_url": "https://d2sfmb70tjjk8r.cloudfront.net",
+  "skill_repo_url": "git@github.com:saginizar/fia-test-skill-monorepo.git",
+  "kit_version": "2026-09-08.1"
+}
