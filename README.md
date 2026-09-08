@@ -14,16 +14,18 @@ should detect **Monorepo mode** at Step 0 without any special-casing.
 
 ```
 fia-test-skill-monorepo/
-├── open-pr/SKILL.md            # drafts + opens a PR via gh
-├── changelog-writer/SKILL.md   # drafts a CHANGELOG entry from git history
-├── standup-notes/SKILL.md      # drafts a daily standup update
-└── skills.sh                   # syncs a skill out to a target repo
+├── open-pr/SKILL.md              # drafts + opens a PR via gh
+├── changelog-writer/SKILL.md     # drafts a CHANGELOG entry from git history
+├── standup-notes/SKILL.md        # drafts a daily standup update
+├── commit-msg-linter/SKILL.md    # lints/suggests a commit message from staged diff
+└── skills.sh                     # syncs a skill out to a target repo
 ```
 
-None of these three Skills are FIA-related — they're realistic, independent
+None of these Skills are FIA-related — they're realistic, independent
 dev-tooling Skills, exactly what a real skills monorepo would actually
-contain. FIA gets installed for **one specific skill** inside this repo, the
-same way it would for a real team's monorepo.
+contain. FIA gets installed **per skill** inside this repo, the same way it
+would for a real team's monorepo — one skill at a time, as the team adds new
+skills over time.
 
 ## Distributing a skill (`skills.sh`)
 
@@ -44,21 +46,21 @@ team would use to pull a skill from this monorepo into their own project.
 System type: **AI Agent Skill**
 Skill Repo URL: `git@github.com:saginizar/fia-test-skill-monorepo.git`
 
-**Use the `open-pr` skill folder for this test.** When the FIA install guide
-asks "What is the folder name of the skill you are installing FIA for?",
-answer `open-pr`. That makes this repo exercise every Monorepo-mode branch in
-the guide:
+FIA has already been installed here for `open-pr`, `changelog-writer`, and
+`standup-notes` (register a new FIA tool per skill, one at a time, exactly
+as a real team would when it adds FIA to another skill later). Each install
+exercises every Monorepo-mode branch in the guide:
 
-- `open-pr/fia.config.json` (skill-scoped public config, travels with the
-  skill via `skills.sh`)
+- `<skill-name>/fia.config.json` (skill-scoped public config, travels with
+  the skill via `skills.sh`)
 - `fia-feedback/SKILL.md` at the repo root (synced out separately — never
-  placed under `.cursor/skills/` in this repo)
-- `open-pr/fia.owner.local.json` (skill-scoped owner secret, gitignored)
+  placed under `.cursor/skills/` in this repo), shared across all skills
+- `<skill-name>/fia.owner.local.json` (skill-scoped owner secret, gitignored)
 - the shared owner nudge hook + `fia-inbox`/`fia-review` at the repo root,
-  which discover `open-pr/` automatically
-- the `## FIA feedback` handoff block appended to `open-pr/SKILL.md` (Step 2a)
+  which discover every FIA-configured skill folder automatically
+- the `## FIA feedback` handoff block appended to `<skill-name>/SKILL.md`
 
-The other two skills (`changelog-writer`, `standup-notes`) exist purely to
-make the monorepo detection realistic — more than one sibling `SKILL.md`
-folder, so Step 0 can't mistake this for a single-skill repo. FIA should
-never touch them.
+**`commit-msg-linter` has no FIA config yet** — it's the next skill to
+register, to test the "adding FIA to one more skill in an already-FIA-ed
+monorepo" flow (shared infra reused untouched, only the new skill's files
+created).
