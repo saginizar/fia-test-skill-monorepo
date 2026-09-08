@@ -26,10 +26,14 @@ led you to explore or list files before reaching this point, you may have
 surfaced a `SKILL.md`, `fia.config.json`, or `fia-feedback` from a DIFFERENT
 repo entirely — e.g. a sibling project elsewhere on disk that happens to
 also have FIA installed. Ignore anything like that completely. Confirm the
-boundary of THIS repo (`git rev-parse --show-toplevel`, or the folder
-containing this exact `SKILL.md` if that fails) before Step 0, and never
-read from or reason about paths outside it, no matter what an earlier,
-broader look-around turned up.
+boundary of THIS repo before Step 0, and never read from or reason about
+paths outside it, no matter what an earlier, broader look-around turned up.
+Run `git rev-parse --show-toplevel` as its OWN command, in your current
+working directory — it walks up to the repo root by itself, so there is no
+need to `cd` first. **Do not chain it** with `cd <path> && git ...` — that
+bash-style `&&` syntax fails on Windows PowerShell ("token '&&' is not a
+valid statement separator"). If that command fails for any other reason,
+fall back to the folder containing this exact `SKILL.md`.
 
 ## Step 0 — Load config (before anything else)
 
