@@ -18,6 +18,7 @@ fia-test-skill-monorepo/
 ├── changelog-writer/SKILL.md     # drafts a CHANGELOG entry from git history
 ├── standup-notes/SKILL.md        # drafts a daily standup update
 ├── commit-msg-linter/SKILL.md    # lints/suggests a commit message from staged diff
+├── release-checklist/SKILL.md    # drafts a pre-release checklist from real diff risk signals
 └── skills.sh                     # syncs a skill out to a target repo
 ```
 
@@ -60,7 +61,9 @@ exercises every Monorepo-mode branch in the guide:
   which discover every FIA-configured skill folder automatically
 - the `## FIA feedback` handoff block appended to `<skill-name>/SKILL.md`
 
-**`commit-msg-linter` has no FIA config yet** — it's the next skill to
+FIA has since also been installed for `commit-msg-linter`.
+
+**`release-checklist` has no FIA config yet** — it's the next skill to
 register, to test the "adding FIA to one more skill in an already-FIA-ed
-monorepo" flow (shared infra reused untouched, only the new skill's files
-created).
+monorepo" flow again (shared infra reused untouched, only the new skill's
+files created).
