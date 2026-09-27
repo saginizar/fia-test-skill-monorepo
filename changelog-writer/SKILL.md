@@ -53,3 +53,10 @@ create one) once they confirm.
 
 - Never invent a version number — that's the user's call at release time.
 - Never merge unrelated commits into one bullet just to shorten the list.
+
+## FIA feedback
+
+If the user wants to give feedback about this skill, invoke the `fia-feedback`
+skill and include the phrase "this feedback is for the `changelog-writer` skill"
+in your handoff. This lets `fia-feedback` load the correct config and route
+the submission to the right FIA tool.
