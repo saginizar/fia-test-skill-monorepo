@@ -47,9 +47,9 @@ team would use to pull a skill from this monorepo into their own project.
 System type: **AI Agent Skill**
 Skill Repo URL: `git@github.com:saginizar/fia-test-skill-monorepo.git`
 
-FIA has already been installed here for `open-pr`, `changelog-writer`, and
-`standup-notes` (register a new FIA tool per skill, one at a time, exactly
-as a real team would when it adds FIA to another skill later). Each install
+FIA is not currently installed for any skill in this repo (freshly reset —
+register a new FIA tool per skill, one at a time, exactly as a real team
+would when it adds FIA to a skill for the first time). Each install
 exercises every Monorepo-mode branch in the guide:
 
 - `<skill-name>/fia.config.json` (skill-scoped public config, travels with
@@ -61,9 +61,8 @@ exercises every Monorepo-mode branch in the guide:
   which discover every FIA-configured skill folder automatically
 - the `## FIA feedback` handoff block appended to `<skill-name>/SKILL.md`
 
-FIA has since also been installed for `commit-msg-linter`.
-
-**`release-checklist` has no FIA config yet** — it's the next skill to
-register, to test the "adding FIA to one more skill in an already-FIA-ed
-monorepo" flow again (shared infra reused untouched, only the new skill's
-files created).
+The first skill installed in a round creates all the shared root infra
+(`fia-feedback/SKILL.md`, `Intelligent-Feedback-Agent-FIA/`, `.cursor/`,
+`.claude/`); every skill installed after that in the same round should reuse
+it untouched and only add its own `<skill-name>/fia.config.json` +
+`fia.owner.local.json` + SKILL.md handoff block.

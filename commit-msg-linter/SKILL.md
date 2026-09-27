@@ -46,10 +46,3 @@ Point out mismatches plainly; don't rewrite silently.
 
 - Never invent a summary for changes you haven't actually seen in the diff.
 - Never commit anything yourself — only suggest the message text.
-
-## FIA feedback
-
-If the user wants to give feedback about this skill, invoke the `fia-feedback`
-skill and include the phrase "this feedback is for the `commit-msg-linter`
-skill" in your handoff. This lets `fia-feedback` load the correct config and
-route the submission to the right FIA tool.
