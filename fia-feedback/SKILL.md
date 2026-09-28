@@ -107,7 +107,6 @@ conversation on it. On Windows, always call `curl.exe` explicitly (see Step
 
 ```bash
 curl.exe -sS "<api_base>/skill/context?tool_id=<tool_id>&skill_key=<skill_key>"
-
 ```
 
 Remember whatever `context_md` (or, if that's null, `tool_description`) comes
@@ -230,7 +229,6 @@ directory determined in Step 0):
   "page_route": "<skill name from Step 0 if known; otherwise which command/part of the tool this is about>",
   "environment": "skill"
 }
-
 ```
 
 Omit `email` entirely if no git email was resolved in Step 0.5. FIA enriches
@@ -243,7 +241,6 @@ trailing `\`/backtick anywhere in it:
 
 ```bash
 curl.exe -sS -X POST "<api_base>/skill/submit" -H "Content-Type: application/json" --data @<temp-dir>/fia-payload.json
-
 ```
 
 If that errors with `UnexpectedCharactersAfterHereStringHeader` (a

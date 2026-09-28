@@ -69,7 +69,6 @@ curl's flags — always call `curl.exe` explicitly:
 
 ```bash
 curl.exe -sS "<api_base>/skill/feedback?tool_id=<tool_id>&feedback_id=<feedback_id>" -H "X-Fia-Read-Key: <owner_read_key>"
-
 ```
 
 If Step 0 found only one entry, use it directly. If it found more than one,

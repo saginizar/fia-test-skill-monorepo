@@ -58,7 +58,6 @@ explicitly:
 
 ```bash
 curl.exe -sS "<api_base>/skill/summary?tool_id=<tool_id>&kit_version=<kit_version>" -H "X-Fia-Read-Key: <owner_read_key>"
-
 ```
 
 Always include `&kit_version=<kit_version>` from that entry's own config —

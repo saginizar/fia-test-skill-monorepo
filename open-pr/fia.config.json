@@ -1,8 +1,8 @@
 {
-  "tool_id": "fdaec469-bc25-480f-9b44-2e72f58782c4",
-  "skill_key": "sk_k1GRf2g9xBlCG0fhEnYKdj6Vmk0F1Ine",
-  "api_base": "https://lzs1nyjb29.execute-api.us-east-1.amazonaws.com",
-  "dashboard_url": "https://d2sfmb70tjjk8r.cloudfront.net",
+  "tool_id": "325aef8a-39a8-4be5-b8ce-f8a2344488af",
+  "skill_key": "sk_bxvPu8zc5QPSWxEZf8ZXBvKcBlqQfNyH",
+  "api_base": "https://g8vz5qvm26.execute-api.us-east-1.amazonaws.com",
+  "dashboard_url": "https://duhgx6dhts40l.cloudfront.net",
   "skill_repo_url": "git@github.com:saginizar/fia-test-skill-monorepo.git",
   "kit_version": "2026-09-08.1"
 }
